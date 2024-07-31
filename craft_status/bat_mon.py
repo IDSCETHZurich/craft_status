@@ -36,6 +36,7 @@ class BatteryMonitor(Node):
             msg.data = float(battery_percentage)
             msg1.data = float(battery_voltage)
             self.publisher_.publish(msg)
+            self.publisher_1.publish(msg1)
             self.get_logger().info(
                 f'Battery Voltage: {battery_voltage:.2f}V, Battery Percentage: {battery_percentage:.2f}%')
 
